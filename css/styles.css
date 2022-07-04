@@ -1,12 +1,15 @@
+body {
+    font-family: 'Helvetica', sans-serif;
+    text-align: center;
+}
+
 h1 {
     text-align: center;
     font-size: 64px;
 }
 
 .container {
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    display: inline-flex;
 }
 
 #board {
@@ -19,14 +22,78 @@ h1 {
 }
 
 .square {
+    transition: all 0.4s;
     background-color: lavender;
     box-sizing: border-box;
     display: inline-flex;
     width: 30%;
     height: 30%;
     border: 1px solid black;
+    margin: 2px 0;
+}
+
+.xhover {
+    transition: all 0.4s;
+    background-image: url(../images/x.webp);
+    background-size: 100%;
+}
+
+.ohover {
+    transition: all 0.4s;
+    background-image: url(../images/circle-png.webp);
+    background-size: 100%;
 }
 
 img {
-    max-width: 100%;
+    height: 100px;
+}
+
+#result {
+    margin-top: -12px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.sidebar {
+    box-sizing: border-box;
+    width: 200px;
+    max-height: 455px;
+    background-color: aliceblue;
+    padding: 3em;
+}
+
+.x {
+    background-image: url(../images/x.webp);
+    background-size: 100%;
+}
+
+.o {
+    background-image: url(../images/circle-png.webp);
+    background-size: 100%;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+#turns {
+    margin-top: -12px;
+}
+
+#players-turn {
+    margin-top: -12px;
+}
+
+#result {
+    margin-top: -24px;
+    margin-bottom: 0.2em;
+}
+
+header {
+    display: inline-flex;
+    margin-top: 12px;
+}
+
+select#x-avatar option[value="default"] { 
+    background-image:url(../images/x.webp);   
 }
