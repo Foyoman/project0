@@ -1,0 +1,32 @@
+h1 {
+    text-align: center;
+    font-size: 64px;
+}
+
+.container {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#board {
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.square {
+    background-color: lavender;
+    box-sizing: border-box;
+    display: inline-flex;
+    width: 30%;
+    height: 30%;
+    border: 1px solid black;
+}
+
+img {
+    max-width: 100%;
+}
