@@ -32,6 +32,16 @@ h1 {
     margin: 2px 0;
 }
 
+.clickable.X:hover {
+    background-image: url(../images/x.webp);
+    background-size: 100%;
+}
+
+.clickable.O:hover {
+    background-image: url(../images/circle-png.webp);
+    background-size: 100%;
+}
+
 .xhover {
     transition: all 0.4s;
     background-image: url(../images/x.webp);

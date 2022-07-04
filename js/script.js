@@ -39,6 +39,16 @@ const render = function () {
     $('#x-wins').text(`Wins: ${xWinCount}`);
     $('#o-wins').text(`Wins: ${oWinCount}`);
     
+    if (turnCount % 2 === 0) {
+        $('.square').removeClass('O');
+        $('.square').addClass('X');
+    }
+
+    if (turnCount % 2 !== 0) {
+        $('.square').removeClass('X');
+        $('.square').addClass('O');
+    }
+
     const winCheck = function () {
         if ($('#board').find('.x1.x').length === 3) {
             xWins();
@@ -111,9 +121,10 @@ $(document).ready(function() {
     });
 
     $('#new-game').on('click', function() {
-        $('.square').removeClass('x o').addClass('clickable');
+        $('.square').removeClass('x o X O').addClass('clickable');
         $(this).addClass('hidden');
         $('#result').addClass('hidden');
+        render();
     });
     
 
