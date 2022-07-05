@@ -1,5 +1,3 @@
-const playerX = 'x';
-const playerO = 'o';
 const winningCombinations = [
     [0, 1, 2],
     [3, 4, 5],
@@ -13,51 +11,33 @@ const winningCombinations = [
 
 let arrayX = [];
 let arrayO = [];
+let turnCount = 0;
+let xWinCount = 0;
+let oWinCount = 0;
+let xWin = 0;
+let oWin = 0;
 
-const winCheck = function (){
+const reset = function () {
+    xWin = undefined;
+    oWin = undefined;
+    turnCount = 0;
+    arrayX = [];
+    arrayO = [];
+}
+
+const winCheck = function() {
     for (let i = 0; i < winningCombinations.length; i++) {
-        if (arrayX.includes(winningCombinations[i])) {
-            xWins();
-        } else {
-            oWins();
+        const xWinCheck = winningCombinations[i].every(element => {
+            return arrayX.includes(element)})
+        if (xWinCheck) {
+            xWin = true;
+            xWinCount += 1;
+        }
+        const oWinCheck = winningCombinations[i].every(element => {
+            return arrayO.includes(element)})
+        if (oWinCheck) {
+            oWin = true;
+            oWinCount += 1;
         }
     }
 };
-
-for (let i = 0; i < winningCombinations.length; i++) {
-    winningCombinations[i].every(element => {
-        if (arrayX.includes(element)) {
-            xWins();
-        } else if (arrayO.includes(element)) {
-            oWins();
-        }
-    });
-}
-
-$('.clickable').click(function() {
-    if (turnCount % 2 === 0 && $(this).hasClass('clickable') === true) {
-        turnCount += 1;
-        const gridValue = $(this).data('value');
-        arrayX.push(gridValue);
-        $(this).addClass('x');
-        $(this).find('img').attr('src', xAvatarImages[xAvatar]);
-        $(this).removeClass('clickable')
-        render();
-    } else if (turnCount % 2 !== 0 && $(this).hasClass('clickable') === true) {
-        turnCount += 1;
-        $(this).addClass('o');
-        const gridValue = $(this).data('value');
-        arrayX.push(gridValue);
-        $(this).find('img').attr('src', oAvatarImages[oAvatar]);
-        $(this).removeClass('clickable');
-        render();
-    }
-});
-
-$('#new-game').on('click', function() {
-    $('.square').removeClass('x o X O').addClass('clickable');
-    $('.square').html('<img>');
-    $(this).addClass('hidden');
-    $('#result').addClass('hidden');
-    render();
-});
