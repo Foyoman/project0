@@ -47,7 +47,7 @@ img {
     height: 100%;
 }
 
-.clickable.X:hover {
+.clickable.defaultX:hover {
     background-image: url(../images/x.webp);
     background-size: 148px 148px;
 }
@@ -62,7 +62,22 @@ img {
     background-size: 148px 148px;
 }
 
-.clickable.O:hover {
+.clickable.link:hover {
+    background-image: url(../images/Link_BotW.webp);
+    background-size: 148px 148px;
+}
+
+.clickable.pikachu:hover {
+    background-image: url(../images/pikachu.png);
+    background-size: 148px 148px;
+}
+
+.clickable.cat:hover {
+    background-image: url(../images/cat.png);
+    background-size: 148px 148px;
+}
+
+.clickable.defaultO:hover {
     background-image: url(../images/circle-png.webp);
     background-size: 148px 148px;
 }
@@ -73,7 +88,22 @@ img {
 }
 
 .clickable.tie-fighter:hover {
-    background-image: url(../images/tiefighter.png);
+    background-image: url(../images/tiefighter.webp);
+    background-size: 148px 148px;
+}
+
+.clickable.kirby:hover {
+    background-image: url(../images/kirby.png);
+    background-size: 148px 148px;
+}
+
+.clickable.snorlax:hover {
+    background-image: url(../images/snorlax.png);
+    background-size: 148px 148px;
+}
+
+.clickable.dog:hover {
+    background-image: url(../images/doggo.png);
     background-size: 148px 148px;
 }
 
@@ -101,4 +131,8 @@ img {
     margin-bottom: 0.2em;
     font-size: 30px;
     text-align: center;
+}
+
+#new-game {
+    visibility: hidden;
 }

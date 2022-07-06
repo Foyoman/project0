@@ -1,52 +1,37 @@
 const xAvatarImages = {
-    'default': 'images/x.webp',
+    'defaultX': 'images/x.webp',
+    'shuriken': 'images/Shuriken.png',
     'x-wing': 'images/xwing.png',
-    'shuriken': 'images/Shuriken.png'
+    'link': 'images/Link_BotW.webp',
+    'pikachu': 'images/pikachu.png',
+    'cat': 'images/cat.png'
 }
 
 const oAvatarImages = {
-    'default': 'images/circle-png.webp',
-    'tie-fighter': 'images/tiefighter.png',
-    'donut': 'images/donut_PNG31.png' 
+    'defaultO': 'images/circle-png.webp',
+    'donut': 'images/donut_PNG31.png',
+    'tie-fighter': 'images/tiefighter.webp',
+    'kirby': 'images/kirby.png',
+    'snorlax': 'images/snorlax.png',
+    'dog': 'images/doggo.png'
 };
 
-let xAvatar = 'default';
-let oAvatar = 'default';
+let xAvatar = 'defaultX';
+let oAvatar = 'defaultO';
 
 const setAvatar = function() {
     if (turnCount % 2 === 0) {
-        if (xAvatar === 'default') {
-            $('.square').addClass('X');
-        }
-        if (xAvatar === 'shuriken') {
-            $('.square').addClass('shuriken');
-        }
-        if (xAvatar === 'x-wing') {
-            $('.square').addClass('x-wing');
-        }
+        $('.square').addClass(`${xAvatar}`);
         
     }
 
     if (turnCount % 2 !== 0) {
-        if (oAvatar === 'default') {
-            $('.square').addClass('O');
-        }
-        if (oAvatar === 'donut') {
-            $('.square').addClass('donut');
-        }
-        if (oAvatar === 'tie-fighter') {
-            $('.square').addClass('tie-fighter');
-        }
+        $('.square').addClass(`${oAvatar}`);
     }
 }
 
 const resetAvatar = function() {
-    $('.square').removeClass('X');
-    $('.square').removeClass('O');
-    $('.square').removeClass('shuriken');
-    $('.square').removeClass('donut');
-    $('.square').removeClass('x-wing');
-    $('.square').removeClass('tie-fighter');
+    $('.square').removeClass(`${xAvatar} ${oAvatar}`);
 }
 
 const render = function () {   
@@ -120,17 +105,17 @@ $(document).ready(function() {
 
     $('#x-form').on('submit', function(event) {
         event.preventDefault();
+        resetAvatar();
         xAvatar = $(this).find("[name=x-avatar]").val();
         $('#xAvatarPic').attr('src', xAvatarImages[xAvatar]);
-        resetAvatar();
         setAvatar();
     });
     
     $('#o-form').on('submit', function(event) {
         event.preventDefault();
+        resetAvatar();
         oAvatar = $(this).find("[name=o-avatar]").val();
         $('#oAvatarPic').attr('src', oAvatarImages[oAvatar]);
-        resetAvatar();
         setAvatar();
     });
 });
