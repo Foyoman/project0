@@ -1,6 +1,8 @@
 body {
     font-family: 'Helvetica', sans-serif;
     text-align: center;
+    background-color: rgb(56, 75, 97);
+    color: white;
 }
 
 header {
@@ -47,25 +49,43 @@ img {
 
 .clickable.X:hover {
     background-image: url(../images/x.webp);
-    background-size: 100%;
+    background-size: 148px 148px;
+}
+
+.clickable.shuriken:hover {
+    background-image: url(../images/Shuriken.png);
+    background-size: 148px 148px;
+}
+
+.clickable.x-wing:hover {
+    background-image: url(../images/xwing.png);
+    background-size: 148px 148px;
 }
 
 .clickable.O:hover {
     background-image: url(../images/circle-png.webp);
-    background-size: 100%;
+    background-size: 148px 148px;
+}
+
+.clickable.donut:hover {
+    background-image: url(../images/donut_PNG31.png);
+    background-size: 148px 148px;
+}
+
+.clickable.tie-fighter:hover {
+    background-image: url(../images/tiefighter.png);
+    background-size: 148px 148px;
 }
 
 .sidebar {
+    color: black;
     box-sizing: border-box;
     width: 200px;
     max-height: 455px;
     background-color: aliceblue;
     padding: 3em;
     line-height: 24px;
-}
-
-.hidden {
-    visibility: hidden;
+    margin-top: 4px;
 }
 
 #turns {
