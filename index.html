@@ -4,15 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
-        <img src="images/freshmint.webp" alt="tic tac"></header>
+        <img src="images/freshmint.webp" alt="tic tac">
         <img src="images/324099081595211.png" alt="toe">
+    </header>
+
     <div id="turns">
         <h4>Player's Turn:</h4>
         <p id="players-turn"></p>
     </div>
+
+    <div class="save-button">
+        <button class="local-storage">Save Score</button>
+        <button class="reset-storage">Reset Score</button>
+    </div>
+
     <div class="container">
         <div class="left sidebar">
             <img src="images/x.webp" id="xAvatarPic" alt="x">
@@ -32,20 +41,38 @@
                 </label>
                 <button type="submit">Change avatar</button>
             </form>
+
+            </br>
+
+            <div class="edBotDiv" id="xEdBotDiv">
+                <label>
+                    Initiate EdBot AI for X
+                </label>    
+                </br>
+                <button id="xEdBot">Toggle</button>
+                <p>(starts new game)</p>
+            </div>
+
+            <div class="edBotActive" id="xEdBotActive">
+                Warning:</br>
+                EdBot Active!
+            </div>
         </div>
+
         <div id="board">
-            <div class="square clickable" data-value="0"><img></div>
-            <div class="square clickable" data-value="1"><img></div>
-            <div class="square clickable" data-value="2"><img></div>
+            <div class="square clickable" id="0"><img></div>
+            <div class="square clickable" id="1"><img></div>
+            <div class="square clickable" id="2"><img></div>
 
-            <div class="square clickable" data-value="3"><img></div>
-            <div class="square clickable" data-value="4"><img></div>
-            <div class="square clickable" data-value="5"><img></div>
+            <div class="square clickable" id="3"><img></div>
+            <div class="square clickable" id="4"><img></div>
+            <div class="square clickable" id="5"><img></div>
 
-            <div class="square clickable" data-value="6"><img></div>
-            <div class="square clickable" data-value="7"><img></div>
-            <div class="square clickable" data-value="8"><img></div>
+            <div class="square clickable" id="6"><img></div>
+            <div class="square clickable" id="7"><img></div>
+            <div class="square clickable" id="8"><img></div>
         </div> 
+
         <div class="right sidebar">
             <img src="images/circle-png.webp" id="oAvatarPic" alt="o">
             <h3 id="o-wins">Wins: </h3>
@@ -64,11 +91,27 @@
                 </label>
                 <button type="submit">Change avatar</button>
             </form>
+
+            </br>
+
+            <div class="edBotDiv" id="oEdBotDiv">
+                <label>
+                    Initiate EdBot AI for O
+                </label>    
+                </br>
+                <button id="oEdBot">Toggle</button>
+                <p>(starts new game)</p>
+            </div>
+
+            <div class="edBotActive" id="oEdBotActive">
+                Warning:</br>
+                EdBot Active!
+            </div>
         </div>
     </div>
+
     <p id="result"></p>
     <button id="new-game">New Game</button>
-    <link rel="stylesheet" href="css/styles.css">
     <script src="js/jquery.js"></script>
     <script src="js/logic.js"></script>
     <script src="js/script.js"></script>

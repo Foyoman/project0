@@ -14,15 +14,18 @@ let arrayO = [];
 let turnCount = 0;
 let xWinCount = 0;
 let oWinCount = 0;
-let xWin = 0;
-let oWin = 0;
+let xWin = undefined;
+let oWin = undefined;
+let availableMoves = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+let onGoingGame = true;
 
 const reset = function () {
     xWin = undefined;
     oWin = undefined;
-    turnCount = 0;
     arrayX = [];
     arrayO = [];
+    turnCount = 0;
+    availableMoves = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 }
 
 const winCheck = function() {
