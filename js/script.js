@@ -2,11 +2,11 @@ const xAIMove = function() {
     if (xEdBot && turnCount % 2 === 0 && onGoingGame) {
         let xMove = 0;
 
-        if (availableMoves.length === 9 && turnCount % 2 === 0) {
+        if (availableMoves.length === 9) {
             xMove = 0;
         }
 
-        if (availableMoves.length === 7 && turnCount % 2 === 0) {
+        if (availableMoves.length === 7) {
             if (availableMoves.includes(4)) {
                 xMove = 4;
             }
@@ -21,7 +21,7 @@ const xAIMove = function() {
             }
         }
 
-        if (availableMoves.length === 5 && turnCount % 2 === 0) {
+        if (availableMoves.length === 5) {
             if (arrayX.includes(4)) {
                 if (availableMoves.includes(8)) {
                     xMove = 8;
@@ -81,7 +81,7 @@ const xAIMove = function() {
             }
         }
 
-        if (availableMoves.length === 3 && turnCount % 2 === 0) {
+        if (availableMoves.length === 3) {
             if(arrayX.includes(6)) {
                 if (arrayX.includes(4)) {
                     if (availableMoves.includes(2)) {
@@ -168,699 +168,13 @@ const xAIMove = function() {
             }            
         }
         
-        if (availableMoves.length === 1 && turnCount % 2 === 0) {
+        if (availableMoves.length === 1) {
             for (let i = 0; i < 9; i++) {
                 if (availableMoves.includes(i)) {
                     xMove = i;
                 }
             };
         }   
-
-        // starting second
-
-        // if (availableMoves.length === 8 && turnCount % 2 === 0) {
-        //     if (availableMoves.includes(4)) {
-        //         xMove = 4;
-        //     } else {
-        //         xMove = 0;
-        //     }
-        // }
-
-        // if (availableMoves.length === 6 && turnCount % 2 === 0) {
-        //     if (arrayO.includes(0)) {
-        //         if (arrayO.includes(1)) {
-        //             xMove = 2;
-        //         }
-        //         if (arrayO.includes(2)) {
-        //             xMove = 1;
-        //         }
-        //         if (arrayO.includes(3)) {
-        //             xMove = 6;
-        //         }
-        //         if (arrayO.includes(5) || arrayO.includes(7)) {
-        //             xMove = 8;
-        //         }
-        //         if (arrayO.includes(6)) {
-        //             xMove = 3;
-        //         }
-        //         if (arrayO.includes(8)) {
-        //             xMove = 7;
-        //         }
-        //     }
-
-        //     if (arrayO.includes(1)) {
-        //         if (arrayO.includes(0) || arrayO.includes(5) || arrayO.includes(6)) {
-        //             xMove = 2;
-        //         }
-        //         if (arrayO.includes(2) || arrayO.includes(3) || arrayO.includes(8)) {
-        //             xMove = 0;
-        //         }
-        //         if (arrayO.includes(7)) {
-        //             xMove = 5;
-        //         }
-        //     }
-
-        //     if (arrayO.includes(2)) {
-        //         if (arrayO.includes(0)) {
-        //             xMove = 1;
-        //         }
-        //         if (arrayO.includes(1)) {
-        //             xMove = 0;
-        //         }
-        //         if (arrayO.includes(3) || arrayO.includes(7)) {
-        //             xMove = 6;
-        //         }
-        //         if (arrayO.includes(5)) {
-        //             xMove = 8;
-        //         }
-        //         if (arrayO.includes(6)) {
-        //             xMove = 3;
-        //         }
-        //         if (arrayO.includes(8)) {
-        //             xMove = 5;
-        //         }
-        //     }
-
-        //     if (arrayO.includes(3)) {
-        //         if (arrayO.includes(0) || arrayO.includes(2) || arrayO.includes(7)) {
-        //             xMove = 6;
-        //         }
-        //         if (arrayO.includes(1) || arrayO.includes(6) || arrayO.includes(8)) {
-        //             xMove = 0;
-        //         }
-        //         if (arrayO.includes(5)) {
-        //             xMove = 1;
-        //         }
-        //     }
-
-        //     if (arrayO.includes(4)) {
-        //         if (arrayO.includes(1)) {
-        //             xMove = 7;
-        //         }
-        //         if (arrayO.includes(2) || arrayO.includes(8)) {
-        //             xMove = 6;
-        //         }
-        //         if (arrayO.includes(3)) {
-        //             xMove = 5;
-        //         }
-        //         if (arrayO.includes(5)) {
-        //             xMove = 3;
-        //         }
-        //         if (arrayO.includes(6)) {
-        //             xMove = 2;
-        //         }
-        //         if (arrayO.includes(7)) {
-        //             xMove = 1;
-        //         }
-        //     }
-
-        //     if (arrayO.includes(5)) {
-        //         if (arrayO.includes(0) || arrayO.includes(2) || arrayO.includes(7)) {
-        //             xMove = 8;
-        //         }
-        //         if (arrayO.includes(1) || arrayO.includes(6) || arrayO.includes(8)) {
-        //             xMove = 2;
-        //         }
-        //         if (arrayO.includes(3)) {
-        //             xMove = 7;
-        //         }
-        //     }
-            
-        //     if (arrayO.includes(6)) {
-        //         if (arrayO.includes(0)) {
-        //             xMove = 3;
-        //         }
-        //         if (arrayO.includes(1) || arrayO.includes(5)) {
-        //             xMove = 2;
-        //         }
-        //         if (arrayO.includes(2)) {
-        //             xMove = 5;
-        //         }
-        //         if (arrayO.includes(3)) {
-        //             xMove = 0;
-        //         }
-        //         if (arrayO.includes(7)) {
-        //             xMove = 8;
-        //         }
-        //         if (arrayO.includes(8)) {
-        //             xMove = 7;
-        //         }
-        //     }
-
-        //     if (arrayO.includes(7)) {
-        //         if (arrayO.includes(0) || arrayO.includes(5) || arrayO.includes(6)) {
-        //             xMove = 8;
-        //         }
-        //         if (arrayO.includes(1)) {
-        //             xMove = 3;
-        //         }
-        //         if (arrayO.includes(2) || arrayO.includes(3) || arrayO.includes(8)) {
-        //             xMove = 6;
-        //         }
-        //     }
-
-        //     if (arrayO.includes(8)) {
-        //         if (arrayO.includes(0)) {
-        //             xMove = 1;
-        //         }
-        //         if (arrayO.includes(1) || arrayO.includes(3)) {
-        //             xMove = 0;
-        //         }
-        //         if (arrayO.includes(2)) {
-        //             xMove = 5;
-        //         }
-        //         if (arrayO.includes(5)) {
-        //             xMove = 2;
-        //         }
-        //         if (arrayO.includes(6)) {
-        //             xMove = 7;
-        //         }
-        //         if (arrayO.includes(7)) {
-        //             xMove = 6;
-        //         }
-        //     }
-        // }
-
-        // if (availableMoves.length === 4 && turnCount % 2 === 0) {
-
-        //     if (arrayX.includes(4)) {
-        //         if (arrayX.includes(2)) {
-        //             if (availableMoves.includes(6)) {
-        //                 xMove = 6;
-        //             } 
-        //         }
-        //         if (arrayX.includes(0)) {
-        //             if (availableMoves.includes(8)) {
-        //                 xMove = 8;
-        //             }
-        //             if (arrayO.includes(8)) {
-        //                 xMove = 2;
-        //             }
-        //             if (arrayO.includes(2) && arrayO.includes(8)) {
-        //                 xMove = 5;
-        //             }
-        //         }
-
-        //         if (arrayX.includes(2)) {
-        //             if (availableMoves.includes(6)) {
-        //                 xMove = 6;
-        //             }               
-        //             if (arrayO.includes(6)) {
-        //                 if (arrayO.includes(1)) {
-        //                     if (arrayO.includes(0)) {
-        //                         xMove = 3;
-        //                     }
-
-        //                     if (arrayO.includes(6)) {
-        //                         if (arrayO.includes(0)) {
-        //                             xMove = 3;
-        //                         }
-        //                         if (arrayO.includes(3)) {
-        //                             xMove = 0;
-        //                         }
-        //                         if (arrayO.includes(5) || arrayO.includes(7)) {
-        //                             xMove = 8;
-        //                         }
-        //                         if (arrayO.includes(8)) {
-        //                             xMove = 7;
-        //                         }
-        //                     }                    
-        //                 }
-
-        //                 if (arrayO.includes(5) && arrayO.includes(6)) {
-        //                     if (arrayO.includes(0)) {
-        //                         xMove = 3;
-        //                     }
-        //                     if (arrayO.includes(1) || arrayO.includes(3)) {
-        //                         xMove = 0;
-        //                     }
-        //                     if (arrayO.includes(7)) {
-        //                         xMove = 8;
-        //                     }
-        //                     if (arrayO.includes(8)) {
-        //                         xMove = 7;
-        //                     }
-        //                 }
-
-        //                 if (arrayO.includes(6) && arrayO.includes(1)) {
-        //                     if (arrayO.includes(0)) {
-        //                         xMove = 3;
-        //                     }
-        //                     if (arrayO.includes(3)) {
-        //                         xMove = 0;
-        //                     }
-        //                     if (arrayO.includes(5) || arrayO.includes(7)) {
-        //                         xMove = 8;
-        //                     }
-        //                 }
-
-        //                 if (arrayO.includes(5) && arrayO.includes(8)) {
-        //                     xMove = 7;
-        //                 }
-        //             }
-        //         }
-
-        //         if (arrayX.includes(1)) {
-        //             if (availableMoves.includes(7)) {
-        //                 xMove = 7;
-        //             } 
-        //             if (arrayO.includes(7)) {
-        //                 if (arrayO.includes(0) && arrayO.includes(2)) {
-        //                     if (arrayO.includes(7)) {
-        //                         xMove = 3;
-        //                     } 
-        //                     if (availableMoves.includes(5)) {
-        //                         xMove = 5;
-        //                     }
-        //                 }
-        //                 if (arrayO.includes(3) && arrayO.includes(5)) {
-        //                     xMove = 2;
-        //                 }
-        //                     if (arrayO.includes(0) && arrayO.includes(8) && arrayO.includes(7)) {
-        //                     xMove = 6;
-        //                 }
-        //             }   
-        //         }
-                
-
-        //         if (arrayX.includes(6)) {
-        //             if (availableMoves.includes(2)) {
-        //                 xMove = 2;
-        //             } 
-        //             if (arrayO.includes(2)) {
-        //                 if (arrayO.includes(3)) {
-        //                     if (arrayO.includes(0)) {
-        //                         xMove = 1;
-        //                     }
-        //                     if (arrayO.includes(1)) {
-        //                         xMove = 0;
-        //                     }
-        //                     if (arrayO.includes(5) || arrayO.includes(7)) {
-        //                         xMove = 8;
-        //                     }
-        //                     if (arrayO.includes(8)) {
-        //                         xMove = 5;
-        //                     }
-        //                 }
-                        
-        //                 if (arrayO.includes(7)) {
-        //                     if (arrayO.includes(0)) {
-        //                         xMove = 1;
-        //                     }
-        //                     if (arrayO.includes(1) || arrayO.includes(3)) {
-        //                         xMove = 0;
-        //                     }
-        //                     if (arrayO.includes(5)) {
-        //                         xMove = 8;
-        //                     }
-        //                     if (arrayO.includes(8)) {
-        //                         xMove = 5;
-        //                     }
-        //                 }
-        //             }
-        //         }
-
-        //         if (arrayX.includes(8)) {
-        //             if (availableMoves.includes(0)) {
-        //                 xMove = 0;
-        //             } 
-        //             if (arrayO.includes(0)) {
-        //                 if (arrayO.includes(5) || arrayO.includes(7)) {
-        //                     if (arrayO.includes(1)) {
-        //                         xMove = 2;
-        //                     }
-        //                     if (arrayO.includes(2)) {
-        //                         xMove = 1;
-        //                     }
-        //                     if (arrayO.includes(3)) {
-        //                         xMove = 6;
-        //                     }
-        //                     if (arrayO.includes(6)) {
-        //                         xMove = 3;
-        //                     }
-        //                 }
-    
-        //                 if (arrayO.includes(5)) {
-        //                     if (arrayO.includes(7)) {
-        //                         xMove = 6;
-        //                     }
-        //                 }
-        //             }
-        //         }
-                
-        //         if (arrayX.includes(3)) {
-        //             if (availableMoves.includes(5)) {
-        //                 xMove = 5;
-        //             } 
-        //             if (arrayO.includes(5)) {
-        //                 if (availableMoves.includes(6)) {
-        //                     xMove = 6;
-        //                 }
-        //                 if (arrayO.includes(6)) {
-        //                     if (arrayO.includes(0)) {
-        //                         xMove = 7;
-        //                     }
-        //                     if (arrayO.includes(2)) {
-        //                         xMove = 8;
-        //                     }
-        //                 }
-
-        //                 if (arrayO.includes(1) && arrayO.includes(8)) {
-        //                     xMove = 0;
-        //                 }
-        //             }
-        //         }
-                
-        //         if (arrayX.includes(7)) {
-        //             if (availableMoves.includes(1)) {
-        //                 xMove = 1;
-        //             } 
-        //             if (arrayO.includes(1)) {
-        //                 if (arrayO.includes(0) && arrayO.includes(8)) {
-        //                     xMove = 2;
-        //                 }
-
-        //                 if (arrayO.includes(3) && arrayO.includes(5)) {
-        //                     xMove = 6;
-        //                 }
-
-        //                 if (arrayO.includes(6) && arrayO.includes(8)) {
-        //                     xMove = 3;
-        //                 }
-        //             }
-        //         }
-
-        //         if (arrayX.includes(5)) {
-        //             if (availableMoves.includes(3)) {
-        //                 xMove = 3;
-        //             }
-        //             if (arrayO.includes(3) && arrayO.includes(6)) {
-        //                 xMove = 0;
-        //             }
-        //             if (availableMoves.includes(7)) {
-        //                 xMove = 7;
-        //             }
-        //         }
-        //     }
-            
-        //     if (arrayX.includes(0)) {
-        //         if (arrayX.includes(7)) {
-        //             if (arrayO.includes(2) || arrayO.includes(8)) {
-        //                 xMove = 6;
-        //             }
-        //             if (arrayO.includes(3)) {
-        //                 xMove = 5;
-        //             }
-        //             if (arrayO.includes(5)) {
-        //                 xMove = 3;
-        //             }
-        //             if (arrayO.includes(6)) {
-        //                 xMove = 2;
-        //             }
-        //             if (arrayO.includes(8)) {
-        //                 xMove = 6;
-        //             }
-        //         }
-
-        //         if (arrayX.includes(6)) {
-        //             if (availableMoves.includes(3)) {
-        //                 xMove = 3;
-        //             } 
-        //             if (arrayO.includes(3)) {
-        //                 xMove = 5;
-        //             }
-        //         }
-
-        //         if (arrayX.includes(5)) {
-        //             if (arrayO.includes(1) || arrayO.includes(2)) {
-        //                 xMove = 7;
-        //             }
-        //             if (arrayO.includes(6) || arrayO.includes(8)) {
-        //                 xMove = 2;
-        //             }
-        //             if (arrayO.includes(7)) {
-        //                 xMove = 1;
-        //             }
-        //         }
-
-        //         if (arrayX.includes(3)) {
-        //             if (availableMoves.includes(6)) {
-        //                 xMove = 6;
-        //             } 
-        //             if (arrayO.includes(6)) {
-        //                 xMove = 2;
-        //             }
-        //         }
-
-        //         if (arrayX.includes(2)) {
-        //             if (availableMoves.includes(1)) {
-        //                 xMove = 1;
-        //             } 
-        //             if (arrayO.includes(1)) {
-        //                 xMove = 7;
-        //             }
-        //         }
-
-        //         if (arrayX.includes(1)) {
-        //             if (availableMoves.includes(2)) {
-        //                 xMove = 2;
-        //             } 
-        //             if (arrayO.includes(2)) {
-        //                 xMove = 6;
-        //             }
-        //         }
-
-        //         if (arrayX.includes(6)) {
-        //             if (availableMoves.includes(3)) {
-        //                 xMove = 3;
-        //             } 
-        //             if (arrayO.includes(3)) {
-        //                 xMove = 5;
-        //             }
-        //         }
-        //     }
-            
-        // }
-        // if (availableMoves.length === 2 && turnCount % 2 === 0) {
-        //     if (arrayO.includes(0) && arrayO.includes(1)) {
-        //         if (availableMoves.includes(2)) {
-        //             xMove = 2;
-        //         }
-        //     }
-
-        //     if (arrayO.includes(0) && arrayO.includes(2)) {
-        //         if (availableMoves.includes(1)) {
-        //             xMove = 1;
-        //         }
-        //     }
-
-        //     if (arrayO.includes(1) && arrayO.includes(2)) {
-        //         if (availableMoves.includes(0)) {
-        //             xMove = 0;
-        //         }
-        //     }
-
-        //     if (arrayO.includes(3) && arrayO.includes(4)) {
-        //         if (availableMoves.includes(5)) {
-        //             xMove = 5;
-        //         }
-        //     }
-
-        //     if (arrayO.includes(3) && arrayO.includes(5)) {
-        //         if (availableMoves.includes(4)) {
-        //             xMove = 4;
-        //         }
-        //     }
-
-        //     if (arrayO.includes(4) && arrayO.includes(5)) {
-        //         if (availableMoves.includes(3)) {
-        //             xMove = 3;
-        //         }
-        //     }
-
-        //     if (arrayO.includes(6) && arrayO.includes(7)) {
-        //         if (availableMoves.includes(8)) {
-        //             xMove = 8;
-        //         }
-        //     }
-
-        //     if (arrayO.includes(6) && arrayO.includes(8)) {
-        //         if (availableMoves.includes(7)) {
-        //             xMove = 7;
-        //         }
-        //     }
-
-        //     if (arrayO.includes(7) && arrayO.includes(8)) {
-        //         if (availableMoves.includes(6)) {
-        //             xMove = 6;
-        //         }
-        //     }
-
-        //     if (arrayO.includes(0) && arrayO.includes(3)) {
-        //         if (availableMoves.includes(6)) {
-        //             xMove = 6;
-        //         }
-        //     }
-
-        //     if (arrayO.includes(0) && arrayO.includes(6)) {
-        //         if (availableMoves.includes(3)) {
-        //             xMove = 3;
-        //         }
-        //     }
-
-        //     if (arrayO.includes(3) && arrayO.includes(6)) {
-        //         if (availableMoves.includes(0)) {
-        //             xMove = 0;
-        //         }
-        //     }
-
-        //     if (arrayO.includes(1) && arrayO.includes(4)) {
-        //         if (availableMoves.includes(7)) {
-        //             xMove = 7;
-        //         }
-        //     }
-
-        //     if (arrayO.includes(1) && arrayO.includes(7)) {
-        //         if (availableMoves.includes(4)) {
-        //             xMove = 4;
-        //         }
-        //     }
-
-        //     if (arrayO.includes(4) && arrayO.includes(7)) {
-        //         if (availableMoves.includes(1)) {
-        //             xMove = 1;
-        //         }
-        //     }
-
-        //     if (arrayO.includes(2) && arrayO.includes(5)) {
-        //         if (availableMoves.includes(8)) {
-        //             xMove = 8;
-        //         }
-        //     }
-
-        //     if (arrayO.includes(2) && arrayO.includes(8)) {
-        //         if (availableMoves.includes(5)) {
-        //             xMove = 5;
-        //         }
-        //     }
-
-        //     if (arrayO.includes(5) && arrayO.includes(8)) {
-        //         if (availableMoves.includes(2)) {
-        //             xMove = 2;
-        //         }
-        //     }
-
-        //     if (arrayX.includes(0) && arrayX.includes(1)) {
-        //         if (availableMoves.includes(2)) {
-        //             xMove = 2;
-        //         }
-        //     }
-
-        //     if (arrayX.includes(0) && arrayX.includes(2)) {
-        //         if (availableMoves.includes(1)) {
-        //             xMove = 1;
-        //         }
-        //     }
-
-        //     if (arrayX.includes(1) && arrayX.includes(2)) {
-        //         if (availableMoves.includes(0)) {
-        //             xMove = 0;
-        //         }
-        //     }
-
-        //     if (arrayX.includes(3) && arrayX.includes(4)) {
-        //         if (availableMoves.includes(5)) {
-        //             xMove = 5;
-        //         }
-        //     }
-
-        //     if (arrayX.includes(3) && arrayX.includes(5)) {
-        //         if (availableMoves.includes(4)) {
-        //             xMove = 4;
-        //         }
-        //     }
-
-        //     if (arrayX.includes(4) && arrayX.includes(5)) {
-        //         if (availableMoves.includes(3)) {
-        //             xMove = 3;
-        //         }
-        //     }
-
-        //     if (arrayX.includes(6) && arrayX.includes(7)) {
-        //         if (availableMoves.includes(8)) {
-        //             xMove = 8;
-        //         }
-        //     }
-
-        //     if (arrayX.includes(6) && arrayX.includes(8)) {
-        //         if (availableMoves.includes(7)) {
-        //             xMove = 7;
-        //         }
-        //     }
-
-        //     if (arrayX.includes(7) && arrayX.includes(8)) {
-        //         if (availableMoves.includes(6)) {
-        //             xMove = 6;
-        //         }
-        //     }
-
-        //     if (arrayX.includes(0) && arrayX.includes(3)) {
-        //         if (availableMoves.includes(6)) {
-        //             xMove = 6;
-        //         }
-        //     }
-
-        //     if (arrayX.includes(0) && arrayX.includes(6)) {
-        //         if (availableMoves.includes(3)) {
-        //             xMove = 3;
-        //         }
-        //     }
-
-        //     if (arrayX.includes(3) && arrayX.includes(6)) {
-        //         if (availableMoves.includes(0)) {
-        //             xMove = 0;
-        //         }
-        //     }
-
-        //     if (arrayX.includes(1) && arrayX.includes(4)) {
-        //         if (availableMoves.includes(7)) {
-        //             xMove = 7;
-        //         }
-        //     }
-
-        //     if (arrayX.includes(1) && arrayX.includes(7)) {
-        //         if (availableMoves.includes(4)) {
-        //             xMove = 4;
-        //         }
-        //     }
-
-        //     if (arrayX.includes(4) && arrayX.includes(7)) {
-        //         if (availableMoves.includes(1)) {
-        //             xMove = 1;
-        //         }
-        //     }
-
-        //     if (arrayX.includes(2) && arrayX.includes(5)) {
-        //         if (availableMoves.includes(8)) {
-        //             xMove = 8;
-        //         }
-        //     }
-
-        //     if (arrayX.includes(2) && arrayX.includes(8)) {
-        //         if (availableMoves.includes(5)) {
-        //             xMove = 5;
-        //         }
-        //     }
-
-        //     if (arrayX.includes(5) && arrayX.includes(8)) {
-        //         if (availableMoves.includes(2)) {
-        //             xMove = 2;
-        //         }
-        //     }
-        // } else {
-        //     let randomMove = Math.floor(Math.random() * 2);
-        //     xMove = availableMoves[randomMove];
-        // }
 
         $(`#${xMove}`).html(`<img src ="${xAvatarImages[xAvatar]}">`);
         $(`#${xMove}`).removeClass('clickable');
@@ -875,184 +189,9 @@ const oAIMove = function () {
     if (oEdBot && turnCount % 2 !== 0 && onGoingGame) {
         let oMove = undefined;
 
-        if (availableMoves.length === 9 && turnCount % 2 !== 0 && turnCount % 2 !== 0) {
-            oMove = 0;
-        }
+        // starting second - easter egg: this is very very bad code, and the dumbest A"I" you will ever see
 
-        if (availableMoves.length === 7 && turnCount % 2 !== 0) {
-            if (availableMoves.includes(4)) {
-                oMove = 4;
-            }
-            if (arrayX.includes(2)) {
-                oMove = 6;
-            }
-            if (arrayX.includes(4)) {
-                oMove = 8;
-            }
-            if (arrayX.includes(6) || arrayX.includes(8)) {
-                oMove = 2;
-            }
-        }
-
-        if (availableMoves.length === 5 && turnCount % 2 !== 0) {
-            if (arrayO.includes(4)) {
-                if (availableMoves.includes(8)) {
-                    oMove = 8;
-                } 
-                if (arrayX.includes(8)) {
-                    if (arrayX.includes(1) || arrayX.includes(7)) {
-                        oMove = 6;    
-                    }
-                    if (arrayX.includes(3) || arrayX.includes(5)) {
-                        oMove = 2;
-                    }
-                }
-            }
-            
-            if (arrayO.includes(6)) {
-                if (availableMoves.includes(3)) {
-                    oMove = 3;
-                }
-                if (arrayX.includes(3)) {
-                    oMove = 8;
-                }
-            }
-
-            if (arrayO.includes(8)) {
-                if (arrayX.includes(1)) {
-                    oMove = 7;
-                }
-                if (arrayX.includes(2)) {
-                    oMove = 6;
-                }
-                if (arrayX.includes(3)) {
-                    oMove = 5;
-                }
-                if (arrayX.includes(5)) {
-                    oMove = 3;
-                }
-                if (arrayX.includes(6)) {
-                    oMove = 2;
-                }
-                if (arrayX.includes(7)) {
-                    oMove = 1;
-                }
-            }
-
-            if (arrayO.includes(2)) {
-                if (availableMoves.includes(1)) {
-                    oMove = 1;
-                }
-                if (arrayX.includes(1)) {
-                    if (arrayX.includes(6)) {
-                        oMove = 8;
-                    }
-                    if (arrayX.includes(8)) {
-                        oMove = 6;
-                    }
-                }
-            }
-        }
-
-        if (availableMoves.length === 3 && turnCount % 2 !== 0) {
-            if(arrayO.includes(6)) {
-                if (arrayO.includes(4)) {
-                    if (availableMoves.includes(2)) {
-                        oMove = 2;
-                    } else {
-                        oMove = 3;
-                    }
-                }
-
-                if (arrayO.includes(8)) {
-                    if (availableMoves.includes(4)) {
-                        oMove = 4;
-                    } 
-                    if (availableMoves.includes(7)) {
-                        oMove = 7;
-                    }
-                    if (availableMoves.includes(3)) {
-                        oMove = 3;
-                    }             
-                }
-
-                if (arrayO.includes(2)) {
-                    if (availableMoves.includes(4)) {
-                        oMove = 4;
-                    } else {
-                        oMove = 3;
-                    }
-                }
-            }
-
-            if (arrayO.includes(2) && arrayO.includes(4)) {
-                if (availableMoves.includes(6)) {
-                    oMove = 6;
-                } else {
-                    oMove = 1;
-                }
-            }
-
-            if (arrayO.includes(8)) {
-                if (arrayO.includes(7)) {
-                    if (availableMoves.includes(6)) {
-                        oMove = 6;
-                    }
-                    if (arrayX.includes(6)) {
-                        oMove = 2;     
-                    }
-                }
-
-                if (arrayO.includes(5)) {
-                    if (availableMoves.includes(2)) {
-                        oMove = 2;
-                    } else {
-                        oMove = 6;
-                    }
-                }
-
-                if (arrayO.includes(3)) {
-                    if (availableMoves.includes(6)) {
-                        oMove = 6;
-                    } else {
-                        oMove = 2;
-                    }
-                }
-
-                if (arrayO.includes(2)) {
-                    if (availableMoves.includes(4)) {
-                        oMove = 4;
-                    } 
-                    if (availableMoves.includes(5)) {
-                        oMove = 5;
-                    }
-                    if (availableMoves.includes(1)) {
-                        oMove = 1;
-                    }
-                }
-
-                if (arrayO.includes(1)) {
-                    if (availableMoves.includes(2)) {
-                        oMove = 2;
-                    } else {
-                        oMove = 6;
-                    }
-                }
-            }            
-        }
-
-        if (availableMoves.length === 1 && turnCount % 2 !== 0) {
-            for (let i = 0; i < 9; i++) {
-                if (availableMoves.includes(i)) {
-                    oMove = i;
-                }
-            };
-        }
-
-
-        // starting second 
-
-        if (availableMoves.length === 8 && turnCount % 2 !== 0) {
+        if (availableMoves.length === 8) {
             if (availableMoves.includes(4)) {
                 oMove = 4;
             } else {
@@ -1060,7 +199,7 @@ const oAIMove = function () {
             }
         }
 
-        if (availableMoves.length === 6 && turnCount % 2 !== 0) {
+        if (availableMoves.length === 6) {
             if (arrayX.includes(0)) {
                 if (arrayX.includes(1)) {
                     oMove = 2;
@@ -1215,7 +354,7 @@ const oAIMove = function () {
             }
         }
 
-        if (availableMoves.length === 4 && turnCount % 2 !== 0) {
+        if (availableMoves.length === 4) {
 
             if (arrayO.includes(4)) {
                 if (arrayO.includes(2)) {
@@ -1515,7 +654,16 @@ const oAIMove = function () {
             }
             
         }
-        if (availableMoves.length === 2 && turnCount % 2 !== 0) {
+
+        if (availableMoves.length === 2) {
+            oMove = availableMoves[0];
+
+            if (arrayO.includes(0) && arrayO.includes(5) && arrayO.includes(6)) {
+                if (arrayX.includes(2) && arrayX.includes(3) && arrayX.includes(4) && arrayO.includes(8)) {
+                    oMove = 1;
+                }
+            } 
+
             if (arrayX.includes(0) && arrayX.includes(1)) {
                 if (availableMoves.includes(2)) {
                     oMove = 2;
@@ -1731,9 +879,11 @@ const oAIMove = function () {
                     oMove = 2;
                 }
             }
-        } else {
-            let randomMove = Math.floor(Math.random() * 2);
-            oMove = availableMoves[randomMove];
+            if (arrayO.includes(0) && arrayO.includes(5) && arrayO.includes(6)) {
+                if (arrayX.includes(2) && arrayX.includes(3) && arrayX.includes(4) && arrayO.includes(8)) {
+                    oMove = 1;
+                }
+            }
         }
 
         $(`#${oMove}`).html(`<img src ="${oAvatarImages[oAvatar]}">`);
@@ -1862,7 +1012,6 @@ const render = function () {
         $('.square').removeClass('clickable');
         onGoingGame = false;
         reset();
-        // turnCount = 0;
     }
 
     if (arrayX.length + arrayO.length >= 9 && !xWin && !oWin) {

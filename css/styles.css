@@ -147,18 +147,18 @@ h3 {
     visibility: hidden;
 }
 
-#xEdBotActive {
+.edBotActive {
     visibility: hidden;
+    font-weight: bold;
+    text-align: center;
+}
+
+#xEdBotActive {
+    color: red;
 }
 
 #oEdBotActive {
-    visibility: hidden;
-}
-
-.edBotActive {
-    color: red;
-    font-weight: bold;
-    text-align: center;
+    color: rgb(123, 71, 7);
 }
 
 .edBotDiv p {
