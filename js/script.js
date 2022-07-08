@@ -652,6 +652,18 @@ const oAIMove = function () {
                     }
                 }
             }
+
+            if (arrayX.includes(3) && arrayX.includes(6)) {
+                if (availableMoves.includes(0)) {
+                    oMove = 0;
+                }
+            }
+
+            if (arrayO.includes(4) && arrayO.includes(5)) {
+                if (availableMoves.includes(3)) {
+                    oMove = 3;
+                }
+            }
             
         }
 
@@ -772,6 +784,46 @@ const oAIMove = function () {
                 }
             }
 
+            if (arrayX.includes(0) && arrayX.includes(4)) {
+                if (availableMoves.includes(8)) {
+                    oMove = 8;
+                }
+            }
+
+            if (arrayX.includes(0) && arrayX.includes(8)) {
+                if (availableMoves.includes(4)) {
+                    oMove = 4;
+                }
+            }
+
+            if (arrayX.includes(4) && arrayX.includes(8)) {
+                if (availableMoves.includes(0)) {
+                    oMove = 0;
+                }
+            }
+
+            if (arrayX.includes(2) && arrayX.includes(4)) {
+                if (availableMoves.includes(6)) {
+                    oMove = 6;
+                }
+            }
+
+            if (arrayX.includes(2) && arrayX.includes(6)) {
+                if (availableMoves.includes(4)) {
+                    oMove = 4;
+                }
+            }
+
+            if (arrayX.includes(4) && arrayX.includes(6)) {
+                if (availableMoves.includes(2)) {
+                    oMove = 2;
+                }
+            }
+
+
+
+
+
             if (arrayO.includes(0) && arrayO.includes(1)) {
                 if (availableMoves.includes(2)) {
                     oMove = 2;
@@ -879,6 +931,43 @@ const oAIMove = function () {
                     oMove = 2;
                 }
             }
+
+            if (arrayO.includes(0) && arrayO.includes(4)) {
+                if (availableMoves.includes(8)) {
+                    oMove = 8;
+                }
+            }
+
+            if (arrayO.includes(0) && arrayO.includes(8)) {
+                if (availableMoves.includes(4)) {
+                    oMove = 4;
+                }
+            }
+
+            if (arrayO.includes(4) && arrayO.includes(8)) {
+                if (availableMoves.includes(0)) {
+                    oMove = 0;
+                }
+            }
+
+            if (arrayO.includes(2) && arrayO.includes(4)) {
+                if (availableMoves.includes(6)) {
+                    oMove = 6;
+                }
+            }
+
+            if (arrayO.includes(2) && arrayO.includes(6)) {
+                if (availableMoves.includes(4)) {
+                    oMove = 4;
+                }
+            }
+
+            if (arrayO.includes(4) && arrayO.includes(6)) {
+                if (availableMoves.includes(2)) {
+                    oMove = 2;
+                }
+            }
+
             if (arrayO.includes(0) && arrayO.includes(5) && arrayO.includes(6)) {
                 if (arrayX.includes(2) && arrayX.includes(3) && arrayX.includes(4) && arrayO.includes(8)) {
                     oMove = 1;
@@ -934,7 +1023,6 @@ const newGame = function () {
     $('#new-game').css('visibility', 'hidden');
     $('#result').css('visibility', 'hidden');
     onGoingGame = true;
-    reset();
     render();
 }
 
@@ -1002,7 +1090,9 @@ const render = function () {
         $('.square').removeClass('clickable');
         onGoingGame = false;
         reset();
-        turnCount += 1;
+        if (!xEdBot) {
+            turnCount += 1;
+        }
     }
 
     if (oWin) {
@@ -1019,7 +1109,9 @@ const render = function () {
         $('#new-game').css('visibility', 'visible');
         onGoingGame = false;
         reset();
+        if (!xEdBot && !oEdBot) {
         turnCount += Math.floor(Math.random() * 2);
+        }
     }
   
     if (turnCount % 2 === 0) {

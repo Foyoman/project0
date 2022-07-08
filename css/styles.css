@@ -127,7 +127,7 @@ img {
     width: 200px;
     max-height: 455px;
     background-color: aliceblue;
-    padding: 0.5em 3em;
+    padding: 2em 0.5em;
     line-height: 24px;
     margin-top: 4px;
 }
@@ -161,7 +161,8 @@ h3 {
     color: rgb(123, 71, 7);
 }
 
-.edBotDiv p {
-    margin-top: -4px;
+.info {
+    margin: 0;
     font-size: 12px;
+    line-height: 0.9;
 }
