@@ -58,8 +58,6 @@ const happyBoi = function () {
 
 # Project 0 - Tic Tac Toe!
 
-![Tic Tac](images/freshmint.webp)![Toe](images/324099081595211.png)
-
 Welcome to my project 0! Here, I created a functioning tic-tac-toe browser game with HTML, CSS, and JavaScript. Features include:
 
 - Win tracker!
@@ -68,3 +66,5 @@ Welcome to my project 0! Here, I created a functioning tic-tac-toe browser game 
 - Working AI (computer difficulty)
     - I believe the 'EdBot' difficulty I made is unbeatable
     - The 'dEdBot' difficulty, which plays the player that starts second, isn't perfect but pretty okay in my book.
+
+Have fun with my tic tac toe, don't get bored too quick!
