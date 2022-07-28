@@ -60,6 +60,7 @@ const happyBoi = function () {
 
 Welcome to my project 0! Here, I created a functioning tic-tac-toe browser game with HTML, CSS, and JavaScript. [Play now!]( https://foyoman.github.io/project0/) Features include:
 
+
 - Win tracker!
 - Several avatar options for both Player X and Player O!
 - Local storage to save wins!
